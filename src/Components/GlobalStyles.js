@@ -11,9 +11,13 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        height: 100vh;
+        font-family: AppleSDGothicNeo;
         font-size:14px;
         color: black;
+        max-width: 80rem;
+        margin: auto;
+        padding: 32px 24px;
     }
 `;
 

@@ -6,7 +6,7 @@
 - antd
 
 # I Make...
-- main [ ]
-- detail [ ]
-- user [ ]
-- register [ ]
+- [x] main 
+- [ ] detail 
+- [ ] user
+- [ ] register
