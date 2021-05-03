@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: AppleSDGothicNeo;
         font-size:14px;
         color: black;
-        max-width: 80rem;
+        max-width: 40rem;
         margin: auto;
         padding: 32px 24px;
     }

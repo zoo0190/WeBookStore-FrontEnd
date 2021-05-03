@@ -3,44 +3,46 @@ import 'antd/dist/antd.css';
 import { Menu, Dropdown } from 'antd';
 import styled from 'styled-components';
 
-const arr: Array<number> = [1, 2, 3, 4, 5, 6, 7];
+const DropMenu: React.FC = () => {
+  const arr: Array<number> = [1, 2, 3, 4, 5, 6, 7];
 
-const cardinalNumberMenu = (
-  <Menu>
-    {arr.map((value) => (
-      <Menu.Item
-        key={value}
-        onClick={(e) => {
-          console.log(e.key);
-        }}
-      >
-        <div>{value}기</div>
+  const cardinalNumberMenu = (
+    <Menu>
+      {arr.map((value) => (
+        <Menu.Item
+          key={value}
+          onClick={(e) => {
+            console.log(e.key);
+          }}
+        >
+          <div>{value}기</div>
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
+
+  const endMenu = (
+    <Menu>
+      <Menu.Item>
+        <div>Front</div>
       </Menu.Item>
-    ))}
-  </Menu>
-);
+      <Menu.Item>
+        <div>Back</div>
+      </Menu.Item>
+    </Menu>
+  );
 
-const endMenu = (
-  <Menu>
-    <Menu.Item>
-      <div>Front</div>
-    </Menu.Item>
-    <Menu.Item>
-      <div>Back</div>
-    </Menu.Item>
-  </Menu>
-);
-
-const DropMenu: React.FC = () => (
-  <DropdownWrapper>
-    <Dropdown overlay={cardinalNumberMenu}>
-      <CardinalNumberTitle>기수</CardinalNumberTitle>
-    </Dropdown>
-    <Dropdown overlay={endMenu}>
-      <EndTitle>프/백</EndTitle>
-    </Dropdown>
-  </DropdownWrapper>
-);
+  return (
+    <DropdownWrapper>
+      <Dropdown overlay={cardinalNumberMenu}>
+        <CardinalNumberTitle>기수</CardinalNumberTitle>
+      </Dropdown>
+      <Dropdown overlay={endMenu}>
+        <EndTitle>프/백</EndTitle>
+      </Dropdown>
+    </DropdownWrapper>
+  );
+};
 
 export default DropMenu;
 
